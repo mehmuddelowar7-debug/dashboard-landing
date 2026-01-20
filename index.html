@@ -1,30 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- LinkedIn/OpenGraph meta tags -->
-  <meta property="og:title" content="Restaurant Analytics Dashboard">
-  <meta property="og:description" content="Interactive dashboard with revenue insights, predictive modeling, and restaurant analytics.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/mehmuddelowar7-debug/restaurant-analytics-dashboard/main/screenshot.png">
-  <meta property="og:url" content="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Restaurant Analytics Dashboard</title>
+
+  <!-- SEO & Social Preview -->
+  <meta name="description" content="An independently built analytics system to explore restaurant performance, delivery efficiency, and revenue behavior using real-world food delivery data." />
+  <meta property="og:title" content="Restaurant Analytics & Decision Dashboard" />
+  <meta property="og:description" content="A business-focused analytics system exploring revenue, delivery operations, and decision signals in food delivery platforms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mehmuddelowar7-debug.github.io/dashboard-landing/" />
+
   <style>
-    body { font-family: Arial, sans-serif; text-align:center; padding:50px; background:#f5f5f5; }
-    h1 { color:#333; }
-    p { color:#555; }
-    a.button {
-      display:inline-block; margin-top:20px; padding:15px 25px; background:#0073b1; color:#fff; text-decoration:none;
-      border-radius:8px; font-weight:bold;
+    :root {
+      --bg: #0e1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #9ba3b4;
+      --accent: #22c55e;
+      --border: #30363d;
     }
-    a.button:hover { background:#005580; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .hero {
+      margin-bottom: 80px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .cta {
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--card);
+      transition: all 0.2s ease;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #052e16;
+      border-color: var(--accent);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .section {
+      margin-bottom: 72px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .section p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer span {
+      color: var(--text);
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
-  <h1>Restaurant Analytics Dashboard</h1>
-  <p>Explore revenue insights, predictive modeling, and restaurant performance metrics.</p>
-  <a class="button" href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app" target="_blank">Open Dashboard</a>
+
+  <div class="container">
+
+    <section class="hero">
+      <h1>Restaurant Analytics & Decision Dashboard</h1>
+      <p>
+        An independently built analytics system designed to explore restaurant performance,
+        delivery efficiency, and revenue behavior using real-world food delivery data.
+      </p>
+
+      <div class="cta">
+        <a href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app" class="btn primary" target="_blank">Open Interactive Dashboard</a>
+        <a href="https://github.com/mehmuddelowar7-debug/restaurant-analytics-dashboard" class="btn" target="_blank">View Implementation (GitHub)</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why this system exists</h2>
+      <p>
+        Food delivery platforms generate high-volume operational data, but raw data alone
+        does not support decisions. This project was built to demonstrate how messy,
+        real-world data can be transformed into structured insight that supports
+        operational and revenue-focused decision-making.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What the dashboard explores</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Revenue Concentration</h3>
+          <p>Identifies how revenue is distributed across restaurants and where demand is concentrated.</p>
+        </div>
+        <div class="card">
+          <h3>Order Behavior</h3>
+          <p>Analyzes basket size, order frequency, discount usage, and timing patterns.</p>
+        </div>
+        <div class="card">
+          <h3>Delivery Efficiency</h3>
+          <p>Explores preparation time and rider wait signals that impact customer experience.</p>
+        </div>
+        <div class="card">
+          <h3>Operational Sensitivity</h3>
+          <p>Examines how operational variables influence order value and revenue outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Analytical modeling</h2>
+      <p>
+        A regression model is included to study how operational factors such as order size,
+        discounting, preparation time, and rider wait time relate to order value. The model
+        is used as an analytical lens to understand relationships — not as a production
+        forecasting system.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Built independently as a business analytics system.<br />
+        <span>Focus:</span> Decision-making, operational insight, and revenue analysis.
+      </p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
