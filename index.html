@@ -6,9 +6,9 @@
   <title>Restaurant Analytics Dashboard</title>
 
   <!-- SEO & Social Preview -->
-  <meta name="description" content="An independently built analytics system to explore restaurant performance, delivery efficiency, and revenue behavior using real-world food delivery data." />
+  <meta name="description" content="An independently built decision-support analytics dashboard exploring revenue, operations, and performance signals in food delivery platforms." />
   <meta property="og:title" content="Restaurant Analytics & Decision Dashboard" />
-  <meta property="og:description" content="A business-focused analytics system exploring revenue, delivery operations, and decision signals in food delivery platforms." />
+  <meta property="og:description" content="A business-focused analytics system for understanding revenue drivers and operational signals in food delivery platforms." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mehmuddelowar7-debug.github.io/dashboard-landing/" />
 
@@ -42,7 +42,7 @@
     }
 
     .hero {
-      margin-bottom: 80px;
+      margin-bottom: 72px;
     }
 
     .hero h1 {
@@ -87,40 +87,18 @@
       opacity: 0.95;
     }
 
-    .section {
+    .signal-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
       margin-bottom: 72px;
     }
 
-    .section h2 {
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-
-    .section p {
-      color: var(--muted);
-      max-width: 760px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .card {
+    .signal {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 24px;
-    }
-
-    .card h3 {
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .card p {
+      padding: 20px;
       font-size: 15px;
       color: var(--muted);
     }
@@ -142,61 +120,36 @@
 
   <div class="container">
 
+    <!-- HERO -->
     <section class="hero">
       <h1>Restaurant Analytics & Decision Dashboard</h1>
       <p>
-        An independently built analytics system designed to explore restaurant performance,
-        delivery efficiency, and revenue behavior using real-world food delivery data.
+        An independently built decision-support analytics system designed to
+        explore revenue, operational efficiency, and performance signals
+        in food delivery platforms.
       </p>
 
       <div class="cta">
-        <a href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app" class="btn primary" target="_blank">Open Interactive Dashboard</a>
-        <a href="https://github.com/mehmuddelowar7-debug/restaurant-analytics-dashboard" class="btn" target="_blank">View Implementation (GitHub)</a>
+        <a href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app"
+           class="btn primary" target="_blank">
+          Open Interactive Dashboard
+        </a>
+        <a href="https://github.com/mehmuddelowar7-debug/restaurant-analytics-dashboard"
+           class="btn" target="_blank">
+          View Implementation (GitHub)
+        </a>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Why this system exists</h2>
-      <p>
-        Food delivery platforms generate high-volume operational data, but raw data alone
-        does not support decisions. This project was built to demonstrate how messy,
-        real-world data can be transformed into structured insight that supports
-        operational and revenue-focused decision-making.
-      </p>
+    <!-- SIGNALS -->
+    <section class="signal-strip">
+      <div class="signal">Revenue Drivers & Concentration</div>
+      <div class="signal">Order & Customer Behavior</div>
+      <div class="signal">Operational Time Signals</div>
+      <div class="signal">Scenario-Based Order Value Modeling</div>
     </section>
 
-    <section class="section">
-      <h2>What the dashboard explores</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Revenue Concentration</h3>
-          <p>Identifies how revenue is distributed across restaurants and where demand is concentrated.</p>
-        </div>
-        <div class="card">
-          <h3>Order Behavior</h3>
-          <p>Analyzes basket size, order frequency, discount usage, and timing patterns.</p>
-        </div>
-        <div class="card">
-          <h3>Delivery Efficiency</h3>
-          <p>Explores preparation time and rider wait signals that impact customer experience.</p>
-        </div>
-        <div class="card">
-          <h3>Operational Sensitivity</h3>
-          <p>Examines how operational variables influence order value and revenue outcomes.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Analytical modeling</h2>
-      <p>
-        A regression model is included to study how operational factors such as order size,
-        discounting, preparation time, and rider wait time relate to order value. The model
-        is used as an analytical lens to understand relationships — not as a production
-        forecasting system.
-      </p>
-    </section>
-
+    <!-- FOOTER -->
     <footer>
       <p>
         Built independently as a business analytics system.<br />
