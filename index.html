@@ -1,82 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restaurant Analytics Dashboard</title>
 
-  <title>Restaurant Analytics Dashboard</title>
-  <meta name="description" content="A business-focused analytics dashboard for food delivery decision-making.">
+<!-- SEO & Social Preview -->
+<meta name="description" content="An independently built analytics system to explore restaurant performance, delivery efficiency, and revenue behavior using real-world food delivery data." />
+<meta property="og:title" content="Restaurant Analytics & Decision Dashboard" />
+<meta property="og:description" content="A business-focused analytics system exploring revenue, delivery operations, and decision signals in food delivery platforms." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mehmuddelowar7-debug.github.io/dashboard-landing/" />
 
-  <!-- Open Graph (LinkedIn Preview) -->
-  <meta property="og:title" content="Restaurant Analytics Dashboard" />
-  <meta property="og:description" content="Interactive analytics system for revenue, operations, and order behavior." />
-  <meta property="og:type" content="website" />
+<style>
+:root {
+  --bg: #0b0d13;
+  --card: #161b22;
+  --text: #e6edf3;
+  --muted: #9ba3b4;
+  --accent: #22c55e;
+  --border: #30363d;
+}
 
-  <link rel="stylesheet" href="style.css" />
+/* Base Styles */
+* {box-sizing:border-box;margin:0;padding:0;font-family:Inter, -apple-system, BlinkMacSystemFont, sans-serif;}
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x:hidden;
+}
+.container {max-width:1100px;margin:auto;padding:80px 24px;}
+h1,h2 {text-align:center;}
+p {color: var(--muted); max-width:760px;margin:auto;text-align:center;}
+
+/* Hero */
+.hero {margin-bottom:80px;opacity:0;transform:translateY(40px);animation:fadeUp 1s forwards;}
+.hero h1 {font-size:50px;font-weight:800;letter-spacing:-0.5px;margin-bottom:16px;}
+.hero p {font-size:18px;}
+.cta {margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.btn {padding:14px 22px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--border);color:var(--text);background:var(--card);transition:all 0.25s ease;}
+.btn.primary {background:var(--accent);color:#052e16;border-color:var(--accent);}
+.btn:hover {transform:translateY(-2px) scale(1.03);opacity:0.95;}
+
+/* Sections */
+.section {margin-bottom:72px;opacity:0;transform:translateY(40px);animation:fadeUp 0.8s forwards;}
+.section h2 {font-size:30px;margin-bottom:24px;}
+.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px;}
+
+/* Cards */
+.card {background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;opacity:0;transform:translateY(30px);transition:all 0.4s ease;box-shadow:0 2px 8px rgba(0,0,0,0.4);}
+.card h3 {margin-bottom:10px;font-size:20px;color:var(--accent);}
+.card p {font-size:15px;color:var(--muted);}
+.card:hover {transform:translateY(-6px) scale(1.03);}
+
+/* Footer */
+footer {border-top:1px solid var(--border);padding-top:32px;color:var(--muted);font-size:14px;text-align:center;}
+footer span {color:var(--text);font-weight:500;}
+
+/* Animations */
+@keyframes fadeUp {to {opacity:1;transform:translateY(0);}}
+</style>
 </head>
-
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Restaurant Analytics Dashboard</h1>
-      <p class="subtitle">
-        An independently built analytics system designed to support
-        real-world business decisions in food delivery operations.
-      </p>
-    </section>
+<!-- Hero -->
+<section class="hero">
+<h1>Restaurant Analytics & Decision Dashboard</h1>
+<p>An independently built professional analytics system to explore revenue, operational efficiency, and restaurant performance in food delivery platforms.</p>
+<div class="cta">
+<a href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app" class="btn primary" target="_blank">Open Interactive Dashboard</a>
+<a href="https://github.com/mehmuddelowar7-debug/restaurant-analytics-dashboard" class="btn" target="_blank">View Implementation (GitHub)</a>
+</div>
+</section>
 
-    <!-- METRICS -->
-    <section class="metrics">
-      <div class="metric-card">
-        <h2>₹14.5M+</h2>
-        <p>Revenue Analyzed</p>
-      </div>
-      <div class="metric-card">
-        <h2>21,000+</h2>
-        <p>Orders Evaluated</p>
-      </div>
-      <div class="metric-card">
-        <h2>Multi-City</h2>
-        <p>Operational Insights</p>
-      </div>
-    </section>
+<!-- Highlights -->
+<section class="section">
+<h2>Dashboard Highlights</h2>
+<div class="grid">
+  <div class="card" style="animation-delay:0.2s;">Revenue Concentration<br><p>Distribution across restaurants & demand hotspots.</p></div>
+  <div class="card" style="animation-delay:0.4s;">Order Behavior<br><p>Basket size, frequency & discounts analysis.</p></div>
+  <div class="card" style="animation-delay:0.6s;">Operational Efficiency<br><p>Prep time & rider wait signals impacting delivery.</p></div>
+  <div class="card" style="animation-delay:0.8s;">Scenario Modeling<br><p>Evaluate how operational changes influence revenue.</p></div>
+</div>
+</section>
 
-    <!-- CONTEXT -->
-    <section class="story">
-      <h3>What this dashboard solves</h3>
-      <p>
-        Food delivery businesses generate massive transactional data,
-        but decision-making often lacks structured insight.
-      </p>
-      <p>
-        This dashboard transforms raw order data into clear signals
-        around revenue drivers, discount impact, and operational efficiency.
-      </p>
-    </section>
+<footer>
+<p>
+Built independently by <span>Mehmud Delowar (MBA Business Analytics)</span>.<br />
+<span>Focus:</span> Decision-making, operational insight, and revenue analysis.
+</p>
+</footer>
 
-    <!-- DASHBOARD EMBED -->
-    <section class="dashboard-section">
-      <h3>Live Interactive Dashboard</h3>
+</div>
 
-      <div class="dashboard-frame">
-        <iframe
-          src="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64gt.streamlit.app/?embedded=true"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>
-        Built independently to demonstrate business analytics,
-        decision intelligence, and operational thinking.
-      </p>
-    </footer>
-
-  </div>
+<script>
+const cards = document.querySelectorAll('.card');
+cards.forEach((card,i)=>{
+  setTimeout(()=>{card.style.opacity='1';card.style.transform='translateY(0)';}, 400 + i*200);
+});
+</script>
 </body>
 </html>
