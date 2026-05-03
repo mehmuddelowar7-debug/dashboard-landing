@@ -3,593 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mehmud Delowar | Business Analytics Portfolio</title>
+  <title>Mehmud Delowar | Applied Business Analytics Portfolio</title>
 
-  <meta
-    name="description"
-    content="Business Analytics portfolio of Mehmud Delowar. Showcasing dashboard design, operational insights, revenue analysis, and data-driven decision-making."
-  />
-  <meta property="og:title" content="Mehmud Delowar | Business Analytics Portfolio" />
-  <meta
-    property="og:description"
-    content="Portfolio showcasing analytics projects, dashboards, operational insights, and business decision support."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mehmuddelowar7-debug.github.io/dashboard-landing/" />
+  <meta name="description" content="Applied business analytics portfolio demonstrating decision-making, KPI systems, and operational insights." />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
   <style>
-    :root {
-      --bg: #0f172a;
-      --surface: #111827;
-      --surface-2: #1f2937;
-      --border: #243244;
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --subtle: #94a3b8;
-      --accent: #22c55e;
-      --accent-hover: #28d965;
-      --accent-dark: #052e16;
-      --max-width: 1120px;
-      --radius: 18px;
-      --shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(34, 197, 94, 0.08), transparent 28%),
-        linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--max-width), calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 88px 0;
-    }
-
-    .hero {
-      padding: 110px 0 88px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 8px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 4.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 18px;
-    }
-
-    .hero-role {
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      color: #dbeafe;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .small {
-      font-size: 0.95rem;
-      color: var(--subtle);
-    }
-
-    .hero-summary {
-      max-width: 760px;
-      font-size: 1.08rem;
-      color: var(--muted);
-      margin: 24px 0 32px;
-    }
-
-    .cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 20px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text);
-      font-weight: 600;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.18);
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: var(--accent-dark);
-      border-color: var(--accent);
-    }
-
-    .btn.primary:hover {
-      background: var(--accent-hover);
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      color: var(--subtle);
-      font-size: 0.96rem;
-      margin-top: 28px;
-    }
-
-    .hero-meta span {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 28px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(1.9rem, 4vw, 2.6rem);
-      line-height: 1.15;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 1.02rem;
-    }
-
-    .about-card,
-    .project-card,
-    .footer-card,
-    .contact-card {
-      background: rgba(17, 24, 39, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-    }
-
-    .about-card,
-    .project-card,
-    .contact-card {
-      padding: 32px;
-    }
-
-    .about-copy {
-      max-width: 860px;
-      color: var(--muted);
-      font-size: 1.02rem;
-    }
-
-    .about-copy p + p {
-      margin-top: 16px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 28px;
-    }
-
-    .grid.three-col {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 16px;
-      padding: 24px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34, 197, 94, 0.3);
-    }
-
-    .card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 10px;
-      color: #dcfce7;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .project-header {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .project-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-
-    .project-tag {
-      display: inline-block;
-      width: fit-content;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.22);
-      color: #bbf7d0;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .project-summary {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .skills-grid .card h3,
-    .highlights-grid .card h3,
-    .experience-grid .card h3 {
+      background: #0f172a;
       color: #f8fafc;
+      margin: 0;
+      line-height: 1.6;
     }
-
-    .skills-grid .card p,
-    .highlights-grid .card p,
-    .experience-grid .card p {
-      color: var(--muted);
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    h1 { font-size: 42px; margin-bottom: 10px; }
+    h2 { margin-top: 60px; }
+    p { color: #cbd5e1; }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #22c55e;
+      color: #052e16;
+      border-radius: 8px;
+      margin-right: 10px;
+      text-decoration: none;
+      font-weight: 600;
     }
-
-    .contact-card p {
-      color: var(--muted);
-      max-width: 720px;
-    }
-
-    .footer-card {
-      padding: 30px 32px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-
-    .footer-card p {
-      color: var(--muted);
-    }
-
-    .footer-name {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    @media (max-width: 900px) {
-      .grid,
-      .grid.three-col {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
-
-      .hero {
-        padding: 84px 0 64px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .container {
-        width: min(var(--max-width), calc(100% - 24px));
-      }
-
-      .about-card,
-      .project-card,
-      .footer-card,
-      .contact-card,
-      .card {
-        padding: 20px;
-      }
-
-      .btn {
-        width: 100%;
-      }
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
-<body>
-  <main class="container">
-    <section class="hero">
-      <div class="eyebrow">Business Analytics Portfolio</div>
-      <h1>Mehmud Delowar</h1>
-      <p class="hero-role">Business Analyst | Operations & Revenue Optimization</p>
-      <p class="small">MBA (Business Analytics) | Real-world operations + data experience</p>
 
-      <p class="hero-summary">
-        I build data-driven systems that help businesses improve revenue visibility,
-        operational efficiency, and decision-making. My work combines analytics,
-        dashboard design, and practical business thinking.
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <h1>Mehmud Delowar</h1>
+    <p><strong>Applied Business Analytics | Decision-Making & Operations</strong></p>
+
+    <p>
+      This portfolio presents applied work in business analytics, focusing on how data can support operational and strategic decision-making in real-world business environments.
+      The work emphasizes practical application of analytics, KPI frameworks, and predictive methods in small and medium-sized enterprises.
+    </p>
+
+    <a href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64.streamlit.app" class="btn" target="_blank">Live Dashboard</a>
+    <a href="https://github.com/mehmuddelowar7-debug/restaurant-analytics-dashboard" class="btn" target="_blank">GitHub</a>
+
+    <!-- RESEARCH ORIENTATION -->
+    <h2>Research Orientation</h2>
+    <p>
+      This work is guided by a central question: how can businesses use existing data more effectively to support decision-making?
+      The focus is on transforming operational data into structured insights using KPI frameworks, scenario analysis, and applied predictive methods.
+    </p>
+
+    <!-- PROJECT -->
+    <h2>Applied Analytics Project</h2>
+    <div class="card">
+      <h3>Restaurant Analytics Dashboard</h3>
+      <p>
+        An applied analytics project designed to evaluate operational performance, pricing dynamics, and revenue patterns in a food-service context.
       </p>
 
-      <div class="cta">
-        <a
-          href="https://restaurant-analytics-dashboard-qu4t4jakpm9i4kjfqn64.streamlit.app"
-          class="btn primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Live Dashboard
-        </a>
-        <a
-          href="https://github.com/mehmuddelowar7-debug/restaurant-analytics-dashboard"
-          class="btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View GitHub Repository
-        </a>
-      </div>
+      <ul>
+        <li>Designed KPI systems for revenue, demand, and discount tracking</li>
+        <li>Analyzed customer behavior and order patterns</li>
+        <li>Identified operational inefficiencies affecting service performance</li>
+        <li>Applied predictive modeling for decision-support scenarios</li>
+      </ul>
+    </div>
 
-      <div class="hero-meta">
-        <span>Dashboard Design</span>
-        <span>Operational Insights</span>
-        <span>Revenue Analysis</span>
-        <span>Decision Support</span>
-      </div>
-    </section>
+    <!-- INSIGHTS -->
+    <h2>Key Insights</h2>
+    <div class="card">
+      <ul>
+        <li>Revenue driven more by average order value than order count</li>
+        <li>Discounts show limited impact on margins</li>
+        <li>Demand trends support staffing and operational planning</li>
+        <li>Geographic differences highlight targeted growth opportunities</li>
+      </ul>
+    </div>
 
-    <section class="section">
-      <div class="section-heading">
-        <h2>Key Highlights</h2>
-        <p>Demonstrating practical business impact through analytics and operations.</p>
-      </div>
+    <!-- RESEARCH RELEVANCE -->
+    <h2>Research Relevance</h2>
+    <p>
+      This project demonstrates how data analytics can be applied in real business environments to support decision-making.
+      It highlights the gap between available data and its practical use in operations, particularly in SME contexts.
+    </p>
 
-      <div class="grid highlights-grid">
-        <div class="card">
-          <h3>End-to-End Project Ownership</h3>
-          <p>Designed and deployed a complete analytics system from raw data analysis to interactive dashboard delivery.</p>
-        </div>
-        <div class="card">
-          <h3>Business-Focused Analysis</h3>
-          <p>Focused on revenue, operations, and decision-making rather than only technical data exploration.</p>
-        </div>
-        <div class="card">
-          <h3>Predictive Modeling</h3>
-          <p>Built a machine learning model to estimate order value and support pricing and performance decisions.</p>
-        </div>
-        <div class="card">
-          <h3>Real-World Problem Solving</h3>
-          <p>Approached analytics from an operator’s perspective with emphasis on practical business outcomes.</p>
-        </div>
-      </div>
-    </section>
+    <!-- METHODS -->
+    <h2>Methods & Tools</h2>
+    <div class="card">
+      <p><strong>Analytics:</strong> Data Analysis, KPI Frameworks, Regression Modeling</p>
+      <p><strong>Tools:</strong> Python (Pandas), Excel, Streamlit</p>
+    </div>
 
-    <section class="section">
-      <div class="section-heading">
-        <h2>About Me</h2>
-        <p>A business-focused profile built around practical analytics and measurable business value.</p>
-      </div>
+    <!-- FOOTER -->
+    <h2>Project Context</h2>
+    <p>
+      Developed as an applied analytics research project during MBA (Business Analytics), focusing on practical implementation of data-driven decision-making.
+    </p>
 
-      <div class="about-card">
-        <div class="about-copy">
-          <p>
-            I am an MBA candidate specializing in Business Analytics, with a strong interest in
-            using data to solve operational and commercial problems.
-          </p>
-          <p>
-            My work focuses on transforming raw business data into structured insights through
-            dashboards, KPI analysis, scenario modeling, and performance tracking. I am especially
-            interested in revenue optimization, operational efficiency, and decision support.
-          </p>
-          <p>
-            I value end-to-end ownership — from understanding the business context to building
-            analytical solutions that are practical, clear, and useful for decision-makers.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <h2>Featured Project</h2>
-        <p>A business analytics project designed to simulate real-world restaurant performance and decision-making.</p>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-tag">Restaurant Analytics Dashboard</span>
-          <div class="project-title">Revenue Optimization & Operational Decision Support</div>
-        </div>
-
-        <p class="project-summary">
-          This project was developed independently to analyze restaurant orders, delivery operations,
-          and performance patterns in a food delivery context. It combines analytical thinking,
-          interactive dashboard design, and practical operational insight generation.
-        </p>
-
-        <div class="grid">
-          <div class="card">
-            <h3>Revenue Concentration</h3>
-            <p>
-              Identified revenue distribution across restaurants and demand zones to highlight
-              business concentration, growth opportunities, and potential risks.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Order Behavior</h3>
-            <p>
-              Analyzed basket size, order patterns, and discount behavior to better understand
-              customer response and support pricing strategy.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Operational Efficiency</h3>
-            <p>
-              Tracked kitchen preparation time and rider wait time to uncover bottlenecks affecting
-              service performance and delivery execution.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Scenario Modeling</h3>
-            <p>
-              Tested how small operational and commercial changes could affect revenue and service
-              outcomes, supporting more informed decision-making.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <h2>Additional Experience</h2>
-        <p>Hands-on exposure to business operations, brand building, and real-world execution.</p>
-      </div>
-
-      <div class="grid three-col experience-grid">
-        <div class="card">
-          <h3>7 Sisters Restro</h3>
-          <p>Worked on operations, revenue tracking, inventory control, and business performance monitoring.</p>
-        </div>
-
-        <div class="card">
-          <h3>Klozee</h3>
-          <p>Built and developed a fashion brand with focus on digital growth, customer engagement, and market positioning.</p>
-        </div>
-
-        <div class="card">
-          <h3>Early-Stage Concepts</h3>
-          <p>Explored ideas like Barpeta Connect, Nexva, and 7 Sisters Tea Co. around branding and scalable business models.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <h2>Skills & Tools</h2>
-        <p>Core capabilities across analytics, business insight generation, and operational improvement.</p>
-      </div>
-
-      <div class="grid skills-grid">
-        <div class="card">
-          <h3>Analytics & Data Processing</h3>
-          <p>Python, Pandas, NumPy, Excel, and structured analysis for transforming data into usable business insight.</p>
-        </div>
-
-        <div class="card">
-          <h3>Dashboard & Visualization</h3>
-          <p>Streamlit, Tableau, and KPI-focused dashboard design for performance monitoring and decision support.</p>
-        </div>
-
-        <div class="card">
-          <h3>Business & Operations Analysis</h3>
-          <p>Revenue tracking, workflow analysis, bottleneck identification, and operational performance evaluation.</p>
-        </div>
-
-        <div class="card">
-          <h3>Decision Support</h3>
-          <p>Scenario analysis, business insight generation, and data-backed recommendations for practical decision-making.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <h2>Let’s Connect</h2>
-        <p>If you're working on something where data drives decisions, I’d be happy to connect.</p>
-      </div>
-
-      <div class="contact-card">
-        <p>
-          I’m actively interested in opportunities across Business Analytics, Operations,
-          Strategy, and decision-support roles where I can combine business thinking with data.
-        </p>
-
-        <div class="cta">
-          <a
-            href="https://www.linkedin.com/in/mehmud-delowar/"
-            class="btn primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Connect on LinkedIn
-          </a>
-          <a href="mailto:mehmuddelowar7@gmail.com" class="btn">
-            Email Me
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="footer-card">
-        <div>
-          <p class="footer-name">Mehmud Delowar</p>
-          <p class="small">Business Analytics | Operations | Revenue Optimization</p>
-        </div>
-        <div>
-          <p class="small">Built independently as a professional analytics portfolio.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  </div>
 </body>
 </html>
